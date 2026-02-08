@@ -1,0 +1,266 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F5E5D3;
+  color: #1E1E1E;
+  padding: 0 20px;
+  line-height: 1.6;
+}
+
+/* GENERAL CONTAINERS */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Mobile-friendly stacking */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* HERO SECTION */
+header {
+  background-color: #E6DFE2;
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 4px solid #C99C8C;
+}
+
+.avatar {
+  width: 480px;
+  max-width: 100%;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  font-size: 2.7rem;
+  color: #8C6A7D;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-style: italic;
+  color: #A5A083;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.insta-link {
+  text-decoration: none;
+  color: #8C6A7D;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.insta-link:hover {
+  color: #C99C8C;
+}
+
+/* HERO FLEX CONTAINER */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 60px 20px;
+  background-color: #E6DFE2;
+  border-bottom: 4px solid #C99C8C;
+}
+
+.hero-image {
+  flex: 0 1 300px;
+  text-align: center;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero-status {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #4c3f4d;
+  background-color: #fdf8f5;
+  padding: 20px;
+  border-left: 5px solid #C99C8C;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* SECTION HEADERS */
+main h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #8C6A7D;
+  border-left: 6px solid #C99C8C;
+  padding-left: 15px;
+}
+
+/* CARD STYLE SECTIONS */
+section > div {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* TIMELINE */
+.timeline-intro {
+  color: #666;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+#trip-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#trip-list li {
+  background: #F9F6F5;
+  margin-bottom: 12px;
+  padding: 15px 20px;
+  border-left: 5px solid #C99C8C;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+/* GUESSING GAME */
+.choice-btn {
+  padding: 12px 18px;
+  margin: 10px 8px 0 0;
+  font-size: 1rem;
+  background-color: #E6DFE2;
+  color: #1E1E1E;
+  border: 2px solid #8C6A7D;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.choice-btn:hover {
+  background-color: #D9C9CF;
+}
+
+#game-response {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #C62828;
+  font-size: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+/* MAP PLACEHOLDER */
+.placeholder-img {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 15px;
+  opacity: 0.9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* CHAT BOT */
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.chat-box input {
+  padding: 12px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.chat-box button {
+  padding: 12px 20px;
+  background-color: #8C6A7D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.chat-box button:hover {
+  background-color: #734f61;
+}
+
+#chat-response {
+  font-style: italic;
+  color: #333;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* CLIENT SPOTTING (NEW) */
+.client-spotting .spotting-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 10px 0 12px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #e6d7e2;
+  background: rgba(140,106,125,.10);
+  color: #8C6A7D;
+  font-weight: 800;
+}
+
+.fact {
+  color: #666;
+  font-weight: 600;
+}
+
+.muted {
+  color: #666;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+  font-size: 0.9rem;
+  background-color: #E6DFE2;
+  margin-top: 60px;
+  border-top: 3px solid #C99C8C;
+}

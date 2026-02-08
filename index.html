@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Where in the World is Elana?</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hero-container">
+        <div class="hero-image">
+          <img
+            src="assets/elana-avatar-main.png"
+            alt="Avatar of Elana"
+            class="avatar"
+          />
+        </div>
+        <div class="hero-text">
+          <h1>Where in the World is Elana?</h1>
+          <p class="tagline">Jet-lagged. Over-caffeinated. Mildly lost.</p>
+          <a
+            href="https://www.instagram.com/earth.to.elana"
+            target="_blank"
+            class="insta-link"
+            >@earth.to.elana</a
+          >
+          <div class="hero-status">
+            <p>
+              <strong>Current Status:</strong> Mentally in Barbados, physically
+              in the boarding zone.
+            </p>
+            <p>
+              <strong>Carry-on contents:</strong> Chargers, snacks, and
+              unresolved emails.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid-container">
+      <section class="left-column">
+        <!-- Travel Timeline -->
+        <div class="travel-timeline">
+          <h2>🧳 Travel Timeline</h2>
+          <p class="timeline-intro">
+            Catch her if you can—here's where she's been, where she's going, and
+            where she's "working remotely" (aka "working from brunch").
+          </p>
+          <ul id="trip-list"></ul>
+        </div>
+      </section>
+
+      <section class="right-column">
+        <!-- Guessing Game -->
+        <div class="game-section card">
+          <h2>🕵️ Guess Where Elana Is</h2>
+          <p class="game-intro">
+            Can you track her down? Guess her current location and prepare to be
+            judged accordingly.
+          </p>
+          <div class="game">
+            <div id="choices-container"></div>
+            <p id="game-response" class="hidden"></p>
+          </div>
+        </div>
+
+        <!-- Client Spotting -->
+        <div class="client-spotting card">
+          <h2>🕵️‍♀️ Client Spotting</h2>
+          <p class="muted">
+            What industry is Elana working with this trip? (AKA Which client did
+            she "accidentally" schedule near good food?)
+          </p>
+
+          <div class="spotting-row">
+            <div class="badge" id="industryBadge">🎸 Musical Instruments</div>
+            <div class="fact" id="industryFact">
+              Spotted near suspicious levels of guitar riffs.
+            </div>
+          </div>
+
+          <button id="newClientBtn">New client sighting</button>
+        </div>
+
+        <!-- Interactive Map/Calendar Placeholder -->
+        <div class="map-calendar card">
+          <h2>📍 Map &amp; Calendar</h2>
+          <p>
+            We're working on some *deeply serious* logistics here. Stay tuned
+            for an interactive map of Elana’s chaotic schedule and probable
+            passport violations.
+          </p>
+          <img
+            src="placeholder-map.png"
+            alt="Map placeholder"
+            class="placeholder-img"
+          />
+        </div>
+
+        <!-- Fake Chat Bot -->
+        <div class="chat-bot card">
+          <h2>💬 Chat with Elana</h2>
+          <p>Got a question? Ask Elana. Emotional support not included.</p>
+          <div class="chat-box">
+            <input
+              type="text"
+              id="user-input"
+              placeholder="Ask something ridiculous..."
+            />
+            <button id="chat-submit">Send</button>
+            <div id="chat-response"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Mini Avatars -->
+    <section class="avatar-extras">
+      <div class="card-style">
+        <h2>🌍 Elana Sightings</h2>
+        <p>
+          Coming soon: tiny Elanas popping up like she’s hiding Easter eggs.
+          Because of course she is.
+        </p>
+        <img
+          src="elana-avatar-mini.png"
+          alt="Mini Elana placeholder"
+          class="avatar-mini"
+        />
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        © 2025 Earth to Elana. All destinations subject to change and mood
+        swings.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
