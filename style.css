@@ -171,6 +171,12 @@ section > div {
   font-size: 1rem;
 }
 
+#newClientBtn.choice-btn{
+  padding: 10px 14px;
+  font-size: 0.95rem;
+}
+
+
 .hidden {
   display: none;
 }
