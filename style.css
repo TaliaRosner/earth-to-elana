@@ -270,3 +270,20 @@ footer {
   margin-top: 60px;
   border-top: 3px solid #C99C8C;
 }
+
+.honeymoon-trip {
+  background: linear-gradient(
+    135deg,
+    #fff6d6,
+    #ffe8c2
+  );
+
+  border-left: 6px solid #ffb703;
+
+  padding: 18px;
+  margin-top: 28px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 4px 14px rgba(255, 183, 3, 0.18);
+}

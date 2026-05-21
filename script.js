@@ -1,58 +1,100 @@
-// --- Travel Timeline Data ---
+// --- Updated Travel Timeline Data ---
 const trips = [
   {
-    date: "Feb 5–8",
-    location: "Dallas, TX",
-    blurb: "Where BBQ is a religion and big hair is a competitive sport.",
+    date: "5/22–5/25",
+    location: "OFF DUTY",
+    blurb:
+      "Elana has temporarily logged off. If found answering emails, please report immediately.",
+  },
+  // Bonus honeymoon entry
+  {
+    date: "5/22–6/3",
+    location: "Jas & Ben Honeymoon",
+    blurb:
+      "Somewhere romantic while the rest of us are answering emails and paying bills like peasants.",
   },
   {
-    date: "Feb 12–15",
+    date: "5/26–5/27",
+    location: "WFH",
+    blurb:
+      "Working from home: professionally multitasking between Slack notifications and snacks.",
+  },
+  {
+    date: "5/28–6/1",
+    location: "Las Vegas, NV",
+    blurb:
+      "The city where sleep is optional and every decision starts with 'well... one more drink.'",
+  },
+  {
+    date: "6/1–6/3",
     location: "Nashville, TN",
     blurb:
-      "Elana came for the hot chicken, stayed for the bachelorette chaos on pedal taverns.",
+      "Cowboy boots, hot chicken, and at least one person crying in a pedal tavern.",
   },
   {
-    date: "Feb 20–22",
+    date: "6/3–6/4",
+    location: "DC / Maryland Area",
+    blurb:
+      "Politics, traffic circles, and people aggressively networking over $19 salads.",
+  },
+  {
+    date: "6/4–6/6",
+    location: "Home",
+    blurb:
+      "A rare and majestic sighting: Elana briefly returning to her natural habitat.",
+  },
+  {
+    date: "6/7–6/10",
+    location: "Raleigh, NC",
+    blurb:
+      "Sweet tea, startup bros, and enough pollen to legally qualify as weather.",
+  },
+  {
+    date: "6/10–6/12",
+    location: "Virginia / DC Area",
+    blurb:
+      "Somewhere between government buildings and an overpriced airport cocktail.",
+  },
+  {
+    date: "6/16–6/18",
+    location: "NJ / NY Area",
+    blurb:
+      "Bagels, attitude, and at least three people saying 'lemme tell you something.'",
+  },
+  {
+    date: "6/23–6/25",
+    location: "NC / SC Area",
+    blurb: "Humidity so disrespectful it feels personal.",
+  },
+  {
+    date: "6/28–7/2",
     location: "Atlanta, GA",
-    blurb:
-      "Peach trees. Traffic. And 47 streets named 'Peachtree'. Good luck out there.",
+    blurb: "Traffic moving at the speed of emotional healing.",
   },
   {
-    date: "Mar 5–8",
-    location: "Chicago, IL",
+    date: "7/3–7/12",
+    location: "VACATION MODE",
     blurb:
-      "Windy, deep-dishy, and aggressively proud of its architecture. Pack layers and a carb tolerance.",
-  },
-  {
-    date: "Mar 18–20",
-    location: "Houston, TX",
-    blurb:
-      "Oil, humidity, and rodeo dreams. She’s yeehawing professionally now.",
-  },
-  {
-    date: "Apr 8–10",
-    location: "Phoenix, AZ",
-    blurb:
-      "It's a dry heat. Like standing in a toaster while getting sunburned in 6 seconds.",
-  },
-  {
-    date: "Apr 15–17",
-    location: "Boston, MA",
-    blurb:
-      "Wicked smaht people yelling about Dunkin’. Also, don’t say 'cheers' here. It’s suspicious.",
-  },
-  {
-    date: "May 1–3",
-    location: "San Diego, CA",
-    blurb:
-      "Fish tacos, flip flops, and vibes so chill they’re borderline unconscious.",
+      "Officially off work. Unofficially being recruited into Tali’s moving operation and neighborhood side quests like a reluctant supporting character.",
   },
 ];
 
 const tripList = document.getElementById("trip-list");
+
 trips.forEach((trip) => {
   const li = document.createElement("li");
-  li.innerHTML = `<strong>${trip.date}:</strong> ${trip.location}<br><em>${trip.blurb}</em>`;
+
+  li.innerHTML = `
+    <strong>${trip.date}:</strong> ${trip.location}
+    <br>
+    <em>${trip.blurb}</em>
+  `;
+
+  // Optional honeymoon styling
+  if (trip.location.includes("Honeymoon")) {
+    li.classList.add("honeymoon-trip");
+  }
+
   tripList.appendChild(li);
 });
 
